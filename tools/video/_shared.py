@@ -186,6 +186,8 @@ def estimate_local_runtime(speed: str) -> float:
 
 
 def load_diffusers_pipeline(pipeline_class: str, model_id: str, enable_offload: bool):
+    import os
+    os.environ.setdefault("PYTHONIOENCODING", "utf-8")
     import diffusers
     import torch
 
